@@ -19,11 +19,15 @@ class BDButton: SKNode {
     
     
     init(imageNamed :String,title: String? = "", buttonAction: @escaping() -> Void) {
+        
         button = SKSpriteNode(imageNamed: imageNamed)
         button.size = CGSize(width: 100, height: 100)
+       
         titleLabel = SKLabelNode(text: title)
+      
         mask = SKSpriteNode(color: SKColor.black, size: button.size)
         mask.alpha = 0
+       
         cropNode = SKCropNode()
         cropNode.maskNode = button
         cropNode.zPosition = 3
@@ -46,7 +50,7 @@ class BDButton: SKNode {
     func setuNodes() {
         button.zPosition = 0
         if let titleLabel = titleLabel {
-            titleLabel.fontName = "Pacific Again"
+            titleLabel.fontName = "Pacific-Again"
             titleLabel.fontSize = CGFloat.universalFont(size: 30)
             titleLabel.fontColor = SKColor.white
             titleLabel.zPosition = 1
@@ -67,6 +71,8 @@ class BDButton: SKNode {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if isEnabled {
             mask.alpha = 0.5
+            
+            //Scales the button up by an procentage
             run(SKAction.scale(by: 1.05, duration: 0.05))
         }
     }
@@ -81,7 +87,7 @@ class BDButton: SKNode {
                     mask.alpha = 0.5
                 
                 } else {
-                    mask.alpha = 0.0
+                    mask.alpha = 0.5
                 }
             }
         }

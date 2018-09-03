@@ -14,6 +14,7 @@ class MyAppManager {
     enum SceneType {
         case MainMenu
         case GameplayScene
+        case GameOver
         
     }
     
@@ -67,7 +68,9 @@ class MyAppManager {
         case SceneType.GameplayScene:
             return GameplayScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
             
-     
+        case SceneType.GameOver:
+            return GameOver(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+            
         }
     }
     

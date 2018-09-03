@@ -85,8 +85,21 @@ public extension CGFloat {
 }
     
     
-    //SKAction Extension
+    //SKAction & SKSpriteNode Extension
     extension SKSpriteNode {
+        
+        func sclaleTo(screenWithPercentage: CGFloat) {
+            let aspectRatio = self.size.height / self.size.width
+            self.size.width = ScreenSize.width * screenWithPercentage
+            self.size.height = self.size.width * aspectRatio
+        }
+        
+        func scaleTo(screenHeightPercentage: CGFloat) {
+            let aspectRatio = self.size.width / self.size.height
+            self.size.height = ScreenSize.heigth * screenHeightPercentage
+            self.size.width = self.size.height * aspectRatio
+        }
+        
         
         func popUp(after: CGFloat = 0.0, sequenceNumber: Int = 1) {
             let action2Duration = 0.2
