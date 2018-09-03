@@ -26,6 +26,10 @@ class MainMenu: SKScene {
         return sprite
     }()
     
+    
+    
+    
+    
     //MARK: - Label
     var title: SKLabelNode = {
         var label = SKLabelNode(fontNamed: "Pacific-Again")
@@ -42,6 +46,8 @@ class MainMenu: SKScene {
     lazy var playButton: BDButton = {
         var button = BDButton(imageNamed: "settingsButton", buttonAction: {
             
+        MyAppManager.shared.transiton(self, toScene: .GameplayScene, transition: SKTransition.moveIn(with: .right, duration: 0.5))
+            
         })
         button.scaleTo(screenWithPercentage: 0.33)
         button.zPosition = 1
@@ -52,6 +58,17 @@ class MainMenu: SKScene {
     lazy var rateButtonVar: BDButton = {
         var button = BDButton(imageNamed: "rateButton", buttonAction: {
             
+            //Rate the game one the app store
+            if let url = URL(string: "https://itenes.apple.com/app/id\(AppId)?actionwrite-review/") {
+                UIApplication.shared.open(url, options: [:], completionHandler: { (result) in
+                    
+                    if result {
+                        print("Success")
+                    } else {
+                        print("Failed")
+                    }
+                })
+            }
         })
         
         button.scaleTo(screenWithPercentage: 0.22)
@@ -63,6 +80,8 @@ class MainMenu: SKScene {
     // MARK: - Share Button
     lazy var shareButtonVar: BDButton = {
         var button = BDButton(imageNamed: "shareButton", buttonAction: {
+            
+             MyAppManager.shared.share(on: self, text: "Love This Game? Shere it with your freinds and family!", image: UIImage(named: "shareButton"), excludeActivityTypes: [.airDrop])
             
         })
         button.scaleTo(screenWithPercentage: 0.23)

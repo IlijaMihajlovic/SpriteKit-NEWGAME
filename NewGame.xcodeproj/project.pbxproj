@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		24A737D9213B16B70015744D /* Pacific Again.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24A737D8213B16B70015744D /* Pacific Again.ttf */; };
 		24A737DB213B1F480015744D /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A737DA213B1F480015744D /* GameOver.swift */; };
+		24AE1D64213D9C760043BA19 /* summer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24AE1D63213D9C760043BA19 /* summer.mp3 */; };
 		24AF1FF5213A8B2900A179CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF1FF4213A8B2900A179CB /* AppDelegate.swift */; };
 		24AF1FFD213A8B2A00A179CB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF1FFC213A8B2A00A179CB /* GameViewController.swift */; };
 		24AF2002213A8B2B00A179CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AF2001213A8B2B00A179CB /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		24A737D8213B16B70015744D /* Pacific Again.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacific Again.ttf"; sourceTree = "<group>"; };
 		24A737DA213B1F480015744D /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
+		24AE1D63213D9C760043BA19 /* summer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = summer.mp3; sourceTree = "<group>"; };
 		24AF1FF1213A8B2900A179CB /* NewGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AF1FF4213A8B2900A179CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24AF1FFC213A8B2A00A179CB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				24CEFFAC213A940D007AAC25 /* Extension.swift */,
 				24CEFFB0213AA36C007AAC25 /* MyAppPlayerStats.swift */,
 				24CEFFAE213A94E4007AAC25 /* MyAppManager.swift */,
+				24AE1D63213D9C760043BA19 /* summer.mp3 */,
 				24AF2001213A8B2B00A179CB /* Assets.xcassets */,
 				24AF2003213A8B2B00A179CB /* LaunchScreen.storyboard */,
 				24AF2006213A8B2B00A179CB /* Info.plist */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24AF2002213A8B2B00A179CB /* Assets.xcassets in Resources */,
+				24AE1D64213D9C760043BA19 /* summer.mp3 in Resources */,
 				24A737D9213B16B70015744D /* Pacific Again.ttf in Resources */,
 				24AF2005213A8B2B00A179CB /* LaunchScreen.storyboard in Resources */,
 			);

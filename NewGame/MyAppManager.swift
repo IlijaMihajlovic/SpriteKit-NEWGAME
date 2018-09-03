@@ -9,6 +9,8 @@
 import Foundation
 import SpriteKit
 
+let AppId = "1234"
+
 class MyAppManager {
     
     enum SceneType {
@@ -98,13 +100,12 @@ class MyAppManager {
     //Create UIActivityController
     func share(on scene: SKScene, text: String, image: UIImage?, excludeActivityTypes: [UIActivityType]) {
         
-        guard let image = UIImage(named: "ButtonBlue") else {return}
+        guard let image = UIImage(named: "shareButton") else {return}
         
         //Set up ActivityViewController
         let shereItems = [text, image] as [Any]
         
-        let shareItems = [text]
-        let activityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+        let activityViewController = UIActivityViewController(activityItems: shereItems, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = scene.view /* So the iPads wont crash. For iPhone development it's not necassary */
         
         //Exclude some activity types from the list (optional)

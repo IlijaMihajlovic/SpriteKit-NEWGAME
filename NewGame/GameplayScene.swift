@@ -64,7 +64,7 @@ class GameplayScene: SKScene {
     func addNewDonuts() {
         
         //Get random images on screen
-        for _ in 0...8{
+        for _ in 0...5{
             
             let imageNamed = "donut\(arc4random_uniform(3) + 1).png"
             //let imageNamed = "donut\(Int(CGFloat.random(1.0, max: 4)))"
@@ -82,6 +82,8 @@ class GameplayScene: SKScene {
             
             addChild(donut)
             
+            //Adds a pop-up effect on a node with a delay
+            donut.button.popUp(after: CGFloat.random(0.01, max: 0.1), sequenceNumber: 0)
         }
         
         let imageNamed2 = "donut\(arc4random_uniform(3) + 1).png"
@@ -97,12 +99,20 @@ class GameplayScene: SKScene {
         winnerDonut.position = CGPoint(x: ScreenSize.width * CGFloat.random(0.1, max: 0.7), y: ScreenSize.heigth * CGFloat.random(0.1, max: 0.7))
         addChild(winnerDonut)
         
+        //Adds a pop-up effect on the winner node
+        winnerDonut.button.popUp()
     }
     
     func removeAllDonuts() {
         enumerateChildNodes(withName: "//*") { (node, stop) in
             if node.name == "donut" {
-                node.removeFromParent()
+                (node as! BDButton).button.popDown()
+                
+                
+                //Delete donut
+                let waitAction = SKAction.wait(forDuration: 0.2)
+                let removeAction = SKAction.removeFromParent()
+                node.run(SKAction.sequence([waitAction,removeAction]))
             }
         }
     }

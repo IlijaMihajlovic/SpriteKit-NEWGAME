@@ -10,8 +10,8 @@ import Foundation
 import SpriteKit
 
 let kSoundsState = "kSoundsState"
-let kBackgroundMusicName = "BackgroundMusic"
-let kBackgroundMusicExtensiom = "m4a"
+let kBackgroundMusicName = "summer"
+let kBackgroundMusicExtension = "mp3"
 let kScore = "kScore"
 let kBestScore = "kBestScore"
 let kMusicvolume = "kMusicVolume"
