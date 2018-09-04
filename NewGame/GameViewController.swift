@@ -13,6 +13,7 @@ import AVFoundation
 let stopBackgroundMusicNotificationName = Notification.Name("stopBackgroundMusicNotificationName")
 let startBackgroundMusicNotificationName = Notification.Name("startBackgroundMusicNotificationName")
 
+
 let startGameplayNotificationName = Notification.Name("startGameplayNotificationName")
 
 class GameViewController: UIViewController {
@@ -35,6 +36,7 @@ class GameViewController: UIViewController {
         } catch {
             return nil
         }
+        
     }()
     
     override func viewDidLoad() {

@@ -67,7 +67,7 @@ class GameplayScene: SKScene {
         for _ in 0...5{
             
             let imageNamed = "donut\(arc4random_uniform(3) + 1).png"
-            //let imageNamed = "donut\(Int(CGFloat.random(1.0, max: 4)))"
+            
             
             let donut = BDButton(imageNamed: imageNamed) {
                 print("Wrong donut tapped")
@@ -75,9 +75,6 @@ class GameplayScene: SKScene {
             }
             donut.scaleTo(screenWithPercentage: CGFloat.random(0.20, max: 0.45))
             donut.zPosition = 1
-            
-            //donut.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.heigth * 0.5)
-            
             donut.position = CGPoint(x: ScreenSize.width * CGFloat.random(0.1, max: 0.8), y: ScreenSize.heigth * CGFloat.random(0.1, max: 0.8))
             
             addChild(donut)
@@ -101,18 +98,16 @@ class GameplayScene: SKScene {
         
         //Adds a pop-up effect on the winner node
         winnerDonut.button.popUp()
+        removeAllDonuts()
     }
     
     func removeAllDonuts() {
         enumerateChildNodes(withName: "//*") { (node, stop) in
-            if node.name == "donut" {
+            
+            if node.name == "donut"{
                 (node as! BDButton).button.popDown()
-                
-                
-                //Delete donut
-                let waitAction = SKAction.wait(forDuration: 0.2)
-                let removeAction = SKAction.removeFromParent()
-                node.run(SKAction.sequence([waitAction,removeAction]))
+            
+              
             }
         }
     }
@@ -133,7 +128,7 @@ class GameplayScene: SKScene {
         MyAppPlayerStats.shared.setScore(score)
         MyAppManager.shared.transiton(self, toScene: .GameOver, transition: SKTransition.moveIn(with: .right, duration: 0.5))
     }
-    
+
 }
 
 
