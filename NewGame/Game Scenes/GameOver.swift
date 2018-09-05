@@ -62,7 +62,7 @@ class GameOver: SKScene {
     
     //MARK: Back Button
     lazy var backButtonVar: BDButton = {
-        var button = BDButton(imageNamed: "backButton", title: "", buttonAction: {
+        var button = BDButton(imageNamed: "backButton2", title: "", buttonAction: {
            
             MyAppManager.shared.transiton(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .up, duration: 0.5))
         })

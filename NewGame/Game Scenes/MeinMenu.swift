@@ -27,6 +27,17 @@ class MainMenu: SKScene {
     }()
     
     
+    //MARK: - Settings Button
+   lazy var settingsButon: BDButton = {
+        var button = BDButton(imageNamed: "settingsButton", buttonAction: {
+            
+            MyAppManager.shared.transiton(self, toScene: .SettingsScene, transition: SKTransition.moveIn(with: .down ,duration: 0.4))
+        })
+    button.zPosition = 1
+    button.scaleTo(screenWithPercentage: 0.18)
+       return button
+    }()
+    
     
     
     
@@ -44,7 +55,7 @@ class MainMenu: SKScene {
     
     // MARK: - Play Button
     lazy var playButton: BDButton = {
-        var button = BDButton(imageNamed: "settingsButton", buttonAction: {
+        var button = BDButton(imageNamed: "playButton", buttonAction: {
             
         MyAppManager.shared.transiton(self, toScene: .GameplayScene, transition: SKTransition.moveIn(with: .right, duration: 0.5))
             
@@ -103,8 +114,9 @@ class MainMenu: SKScene {
         playButton.logAvailableFonts()
         title.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.25)
         background.position = CGPoint.zero
-        rateButtonVar.position = CGPoint(x: ScreenSize.width * -0.20, y: ScreenSize.heigth * -0.15)
-        shareButtonVar.position = CGPoint(x: ScreenSize.width * 0.20, y: ScreenSize.heigth * -0.15)
+        rateButtonVar.position = CGPoint(x: ScreenSize.width * -0.30, y: ScreenSize.heigth * -0.14)
+        shareButtonVar.position = CGPoint(x: ScreenSize.width * 0.30, y: ScreenSize.heigth * -0.15)
+        settingsButon.position = CGPoint(x: ScreenSize.width * -0.37 , y: ScreenSize.heigth * 0.40 )
     }
     
     func addNodes() {
@@ -113,6 +125,7 @@ class MainMenu: SKScene {
         addChild(title)
         addChild(rateButtonVar)
         addChild(shareButtonVar)
+        addChild(settingsButon)
     }
     
  

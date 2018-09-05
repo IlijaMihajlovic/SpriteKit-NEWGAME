@@ -17,6 +17,7 @@ class MyAppManager {
         case MainMenu
         case GameplayScene
         case GameOver
+        case SettingsScene
         
     }
     
@@ -36,12 +37,12 @@ class MyAppManager {
     private func firstLaunch() {
         if !UserDefaults.standard.bool(forKey: "isFirstLaunch") {
             
-            
             print("This is our first launch")
+           
             MyAppPlayerStats.shared.setSounds(true)
             
             //Set the music volime to 100%
-            MyAppPlayerStats.shared.saveMusicVolume(1)
+            MyAppPlayerStats.shared.saveMusicVolume(0.4)
             
             UserDefaults.standard.set(true, forKey: "isFirstLaunch")
             UserDefaults.standard.synchronize()
@@ -73,14 +74,19 @@ class MyAppManager {
         case SceneType.GameOver:
             return GameOver(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
             
+        case SceneType.SettingsScene:
+            return SettingsScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
         }
     }
     
     //The sound will be only played when the function getSound() returns true
     func run(_ fileName: String, onNode: SKNode) {
-        if MyAppPlayerStats.shared.getSound() {
+        
+        //**Enabele/ Disable clik sound**
+       
+        //if MyAppPlayerStats.shared.getSound() {
         onNode.run(SKAction.playSoundFileNamed(fileName, waitForCompletion: false))
-        }
+        //}
     }
     
     //Create an UIAlertController
@@ -114,6 +120,9 @@ class MyAppManager {
         //present the view cotroller
         scene.view?.window?.rootViewController?.present(activityViewController, animated: true, completion: nil)
     }
+    
+    
+    
 }
 
 

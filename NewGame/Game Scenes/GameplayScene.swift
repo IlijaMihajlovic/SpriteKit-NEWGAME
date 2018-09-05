@@ -10,6 +10,8 @@ import SpriteKit
 
 class GameplayScene: SKScene {
     
+    
+    //MARK: - Background Image
     var background: SKSpriteNode = {
         var sprite = SKSpriteNode(imageNamed: "backgroundImage")
         
@@ -22,6 +24,17 @@ class GameplayScene: SKScene {
         
         sprite.zPosition = 0
         return sprite
+    }()
+    
+    //MARK: - Back Button
+    lazy var backButtonToMainMenu: BDButton = {
+        var button = BDButton(imageNamed: "backButton2", buttonAction: {
+            
+            MyAppManager.shared.transiton(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.4))
+        })
+        button.zPosition = 4
+        button.scaleTo(screenWithPercentage: 0.16)
+        return button
     }()
     
     
@@ -42,17 +55,18 @@ class GameplayScene: SKScene {
         setupNodes()
         addNewDonuts()
         addNodes()
-        
     }
     
     func setupNodes() {
         background.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.heigth * 0.5)
         scoreLabel.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.heigth * 0.9)
+        backButtonToMainMenu.position = CGPoint(x: ScreenSize.width * 0.1 , y: ScreenSize.heigth * 0.9)
     }
 
     func addNodes() {
         addChild(background)
         addChild(scoreLabel)
+        addChild(backButtonToMainMenu)
     }
     
     //Start new game
@@ -64,7 +78,7 @@ class GameplayScene: SKScene {
     func addNewDonuts() {
         
         //Get random images on screen
-        for _ in 0...5{
+        for _ in 0...3{
             
             let imageNamed = "donut\(arc4random_uniform(3) + 1).png"
             //let imageNamed = "donut\(Int(CGFloat.random(1.0, max: 4)))"
@@ -73,7 +87,7 @@ class GameplayScene: SKScene {
                 print("Wrong donut tapped")
                 self.handleWrongDonutTapped()
             }
-            donut.scaleTo(screenWithPercentage: CGFloat.random(0.20, max: 0.45))
+            donut.scaleTo(screenWithPercentage: CGFloat.random(0.2, max: 0.3))
             donut.zPosition = 1
             
             //donut.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.heigth * 0.5)
@@ -93,7 +107,7 @@ class GameplayScene: SKScene {
             
         }
         
-        winnerDonut.scaleTo(screenWithPercentage: 0.6)
+        winnerDonut.scaleTo(screenWithPercentage: 0.5)
         winnerDonut.name = "donut"
         winnerDonut.zPosition = 2
         winnerDonut.position = CGPoint(x: ScreenSize.width * CGFloat.random(0.1, max: 0.7), y: ScreenSize.heigth * CGFloat.random(0.1, max: 0.7))

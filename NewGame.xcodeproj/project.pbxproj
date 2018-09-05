@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		242D831A213EAAA400B64926 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D8319213EAAA400B64926 /* MusicManager.swift */; };
+		242D831C213EB03400B64926 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D831B213EB03400B64926 /* Music.swift */; };
 		24A737D9213B16B70015744D /* Pacific Again.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24A737D8213B16B70015744D /* Pacific Again.ttf */; };
 		24A737DB213B1F480015744D /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A737DA213B1F480015744D /* GameOver.swift */; };
 		24AE1D64213D9C760043BA19 /* summer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24AE1D63213D9C760043BA19 /* summer.mp3 */; };
@@ -20,9 +22,17 @@
 		24CEFFAF213A94E4007AAC25 /* MyAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CEFFAE213A94E4007AAC25 /* MyAppManager.swift */; };
 		24CEFFB1213AA36C007AAC25 /* MyAppPlayerStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CEFFB0213AA36C007AAC25 /* MyAppPlayerStats.swift */; };
 		24CEFFB3213AA3DD007AAC25 /* GameplayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CEFFB2213AA3DD007AAC25 /* GameplayScene.swift */; };
+		24F03B70213E7AFE008F561B /* ClickSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24F03B6F213E7AFE008F561B /* ClickSound.mp3 */; };
+		24F03B72213E9266008F561B /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F03B71213E9266008F561B /* SettingsScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24236EDD213FDE8E008E0707 /* TestingFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestingFile.swift; path = ../../../TestingFile.swift; sourceTree = "<group>"; };
+		242D8319213EAAA400B64926 /* MusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
+		242D831B213EB03400B64926 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		247C80DF214043DA00A1AD03 /* ButtonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonFile.swift; path = ../../ButtonFile.swift; sourceTree = "<group>"; };
+		247C80E0214043DE00A1AD03 /* ButtonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFile.swift; sourceTree = "<group>"; };
+		247C80E1214043E400A1AD03 /* TestingFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingFile.swift; sourceTree = "<group>"; };
 		24A737D8213B16B70015744D /* Pacific Again.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacific Again.ttf"; sourceTree = "<group>"; };
 		24A737DA213B1F480015744D /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
 		24AE1D63213D9C760043BA19 /* summer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = summer.mp3; sourceTree = "<group>"; };
@@ -38,6 +48,8 @@
 		24CEFFAE213A94E4007AAC25 /* MyAppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppManager.swift; sourceTree = "<group>"; };
 		24CEFFB0213AA36C007AAC25 /* MyAppPlayerStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppPlayerStats.swift; sourceTree = "<group>"; };
 		24CEFFB2213AA3DD007AAC25 /* GameplayScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayScene.swift; sourceTree = "<group>"; };
+		24F03B6F213E7AFE008F561B /* ClickSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ClickSound.mp3; sourceTree = "<group>"; };
+		24F03B71213E9266008F561B /* SettingsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,8 @@
 		24AF1FE8213A8B2900A179CB = {
 			isa = PBXGroup;
 			children = (
+				247C80E0214043DE00A1AD03 /* ButtonFile.swift */,
+				247C80E1214043E400A1AD03 /* TestingFile.swift */,
 				24AF1FF3213A8B2900A179CB /* NewGame */,
 				24AF1FF2213A8B2900A179CB /* Products */,
 			);
@@ -70,22 +84,36 @@
 		24AF1FF3213A8B2900A179CB /* NewGame */ = {
 			isa = PBXGroup;
 			children = (
+				24F03B73213E93BA008F561B /* Game Scenes */,
 				24AF1FF4213A8B2900A179CB /* AppDelegate.swift */,
+				247C80DF214043DA00A1AD03 /* ButtonFile.swift */,
+				242D8319213EAAA400B64926 /* MusicManager.swift */,
+				242D831B213EB03400B64926 /* Music.swift */,
 				24AF1FFC213A8B2A00A179CB /* GameViewController.swift */,
-				24CEFFA8213A909C007AAC25 /* MeinMenu.swift */,
-				24A737DA213B1F480015744D /* GameOver.swift */,
-				24CEFFB2213AA3DD007AAC25 /* GameplayScene.swift */,
 				24CEFFAA213A937E007AAC25 /* BDButton.swift */,
 				24CEFFAC213A940D007AAC25 /* Extension.swift */,
 				24CEFFB0213AA36C007AAC25 /* MyAppPlayerStats.swift */,
 				24CEFFAE213A94E4007AAC25 /* MyAppManager.swift */,
 				24AE1D63213D9C760043BA19 /* summer.mp3 */,
+				24F03B6F213E7AFE008F561B /* ClickSound.mp3 */,
 				24AF2001213A8B2B00A179CB /* Assets.xcassets */,
 				24AF2003213A8B2B00A179CB /* LaunchScreen.storyboard */,
 				24AF2006213A8B2B00A179CB /* Info.plist */,
 				24A737D8213B16B70015744D /* Pacific Again.ttf */,
 			);
 			path = NewGame;
+			sourceTree = "<group>";
+		};
+		24F03B73213E93BA008F561B /* Game Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				24CEFFA8213A909C007AAC25 /* MeinMenu.swift */,
+				24A737DA213B1F480015744D /* GameOver.swift */,
+				24CEFFB2213AA3DD007AAC25 /* GameplayScene.swift */,
+				24F03B71213E9266008F561B /* SettingsScene.swift */,
+				24236EDD213FDE8E008E0707 /* TestingFile.swift */,
+			);
+			path = "Game Scenes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F03B70213E7AFE008F561B /* ClickSound.mp3 in Resources */,
 				24AF2002213A8B2B00A179CB /* Assets.xcassets in Resources */,
 				24AE1D64213D9C760043BA19 /* summer.mp3 in Resources */,
 				24A737D9213B16B70015744D /* Pacific Again.ttf in Resources */,
@@ -163,12 +192,15 @@
 				24CEFFAD213A940E007AAC25 /* Extension.swift in Sources */,
 				24CEFFA9213A909C007AAC25 /* MeinMenu.swift in Sources */,
 				24AF1FFD213A8B2A00A179CB /* GameViewController.swift in Sources */,
+				24F03B72213E9266008F561B /* SettingsScene.swift in Sources */,
+				242D831A213EAAA400B64926 /* MusicManager.swift in Sources */,
 				24A737DB213B1F480015744D /* GameOver.swift in Sources */,
 				24CEFFAF213A94E4007AAC25 /* MyAppManager.swift in Sources */,
 				24CEFFB3213AA3DD007AAC25 /* GameplayScene.swift in Sources */,
 				24AF1FF5213A8B2900A179CB /* AppDelegate.swift in Sources */,
 				24CEFFAB213A937E007AAC25 /* BDButton.swift in Sources */,
 				24CEFFB1213AA36C007AAC25 /* MyAppPlayerStats.swift in Sources */,
+				242D831C213EB03400B64926 /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
