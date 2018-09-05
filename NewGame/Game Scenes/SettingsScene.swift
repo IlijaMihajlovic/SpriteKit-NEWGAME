@@ -11,8 +11,7 @@ import SpriteKit
 
 class SettingsScene: SKScene {
     
-    var isPlaying = true
-    var musicPlaying = true
+    
     
     //MARK: - Background
     var background: SKSpriteNode = {
@@ -41,18 +40,55 @@ class SettingsScene: SKScene {
         return button
     }()
     
-
+    
+    
+    
     
     //MARK: - Stop Music Button
     
+//    lazy var playMusicButton: BDButton = {
+//        var button = BDButton(imageNamed: "playButton", buttonAction: {
+//        })
+//        button.zPosition = 4
+//        button.scaleTo(screenWithPercentage: 0.10)
+//        button.name = "play"
+//        return button
+//    }()
     
-    let soundButton = SKSpriteNode(color: SKColor.purple, size:CGSize(width: 200, height: 200))
-    let soundButton2 = SKSpriteNode(color: SKColor.red, size:CGSize(width: 200, height: 200))
-
+    lazy var playMusicButton: SKSpriteNode = {
+        var button = SKSpriteNode(imageNamed: "playButton")
+        button.zPosition = 4
+        button.scaleTo(screenHeightPercentage: 0.18)
+        button.sclaleTo(screenWithPercentage: 0.18)
+        button.name = "play"
+        
+        return button
+    }()
+    
+    
+    lazy var pauseMusicButton: SKSpriteNode = {
+        var button = SKSpriteNode(imageNamed: "pauseButton")
+        button.zPosition = 4
+        button.scaleTo(screenHeightPercentage: 0.24)
+        button.sclaleTo(screenWithPercentage: 0.24)
+        button.name = "pause"
+        
+        return button
+    }()
+    
+//    lazy var pauseMusicButton: BDButton = {
+//        var button = BDButton(imageNamed: "pauseButton", buttonAction: {
+//        })
+//        button.zPosition = 4
+//        button.scaleTo(screenWithPercentage: 0.10)
+//        button.name = "pause"
+//        return button
+//    }()
+    
     override func didMove(to view: SKView) {
         print("Inside Settings Scene")
         
-     
+        
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         
         //BackButtonToMainMenu
@@ -62,52 +98,78 @@ class SettingsScene: SKScene {
         //Background Button
         background.position = CGPoint.zero
         addChild(background)
-            
-       
-        soundButton.name = "button1"
-        soundButton2.name = "button2"
         
-        soundButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.0)
-        soundButton2.position = soundButton.position
-        soundButton.zPosition = 15
-        soundButton2.zPosition = 15
-        self.addChild(soundButton)
         
-        //soundButton2.position = soundButton.position
+        playMusicButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.0)
+        pauseMusicButton.position = playMusicButton.position
+        self.addChild(playMusicButton)
         
     }
-
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         if let location = touch?.location(in: self){
             let node = atPoint(location)
-
             
-            if node.name == "button1" {
+            
+            if node.name == "play" {
                 SKTAudio.sharedInstance().pauseBackgroundMusic()
                 node.removeFromParent()
                 
                 //Not really needed for this example, but a good habit
-                if soundButton2.parent == nil {
-
-                    addChild(soundButton2)
+                if pauseMusicButton.parent == nil {
+                    
+                    addChild(pauseMusicButton)
                 }
-
-            } else if node.name == "button2"{
+                
+            } else if node.name == "pause" {
                 SKTAudio.sharedInstance().resumeBackgroundMusic()
                 node.removeFromParent()
                 
                 //Not really needed for this example, but a good habit
-                if soundButton.parent == nil {
-
-                    addChild(soundButton)
+                if playMusicButton.parent == nil {
+                    
+                    addChild(playMusicButton)
                 }
             }
         }
     }
     
     
-   
-  }
+    
+    
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+            let touch = touches.first
+            if let location = touch?.location(in: self){
+                let node = atPoint(location)
+
+
+                if node.name == "play" {
+                    SKTAudio.sharedInstance().pauseBackgroundMusic()
+                    node.removeFromParent()
+
+                    //Not really needed for this example, but a good habit
+                    if pauseMusicButton.parent == nil {
+
+                        addChild(pauseMusicButton)
+                    }
+
+                } else if node.name == "pause" {
+                    SKTAudio.sharedInstance().resumeBackgroundMusic()
+                    node.removeFromParent()
+
+                    //Not really needed for this example, but a good habit
+                    if playMusicButton.parent == nil {
+
+                        addChild(playMusicButton)
+                    }
+                }
+            }
+        }
+    
+    
+    
+}

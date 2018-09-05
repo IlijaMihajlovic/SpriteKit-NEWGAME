@@ -11,9 +11,8 @@ import SpriteKit
 
 class GameScene: SKScene{
     
-    let soundButton = SKSpriteNode(color: UIColor.purpleColor(), size:CGSize(width: 200, height: 200))
-    
-    let soundButton2 = SKSpriteNode(color: UIColor.orangeColor(), size:CGSize(width: 200, height: 200))
+    let soundButton = SKSpriteNode(color: SKColor.purple, size:CGSize(width: 200, height: 200))
+    let soundButton2 = SKSpriteNode(color: SKColor.red, size:CGSize(width: 200, height: 200))
     
     override func didMoveToView(view: SKView) {
         
@@ -21,11 +20,13 @@ class GameScene: SKScene{
         soundButton.name = "button1"
         soundButton2.name = "button2"
         
-        soundButton.position = CGPoint(x: CGRectGetMidX(frame), y: CGRectGetMidY(frame))
+        soundButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.0)
+        soundButton2.position = soundButton.position
         soundButton.zPosition = 15
+        soundButton2.zPosition = 15
         self.addChild(soundButton)
         
-        soundButton2.position = soundButton.position
+        //soundButton2.position = soundButton.position
         
     }
     
