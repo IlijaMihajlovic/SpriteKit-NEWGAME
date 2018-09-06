@@ -11,6 +11,7 @@
 		242D831C213EB03400B64926 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D831B213EB03400B64926 /* Music.swift */; };
 		243BCF42214126F400D4C431 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 243BCF3F214126F400D4C431 /* ProgressHUD.m */; };
 		243BCF43214126F400D4C431 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 243BCF40214126F400D4C431 /* ProgressHUD.bundle */; };
+		243F79A02141A0E00007F001 /* StoreReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F799F2141A0E00007F001 /* StoreReviewHelper.swift */; };
 		24A737D9213B16B70015744D /* Pacific Again.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24A737D8213B16B70015744D /* Pacific Again.ttf */; };
 		24A737DB213B1F480015744D /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A737DA213B1F480015744D /* GameOver.swift */; };
 		24AE1D64213D9C760043BA19 /* summer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24AE1D63213D9C760043BA19 /* summer.mp3 */; };
@@ -36,6 +37,7 @@
 		243BCF3F214126F400D4C431 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		243BCF40214126F400D4C431 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		243BCF41214126F400D4C431 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		243F799F2141A0E00007F001 /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewHelper.swift; sourceTree = "<group>"; };
 		247C80DF214043DA00A1AD03 /* ButtonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonFile.swift; path = ../../ButtonFile.swift; sourceTree = "<group>"; };
 		247C80E0214043DE00A1AD03 /* ButtonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFile.swift; sourceTree = "<group>"; };
 		247C80E1214043E400A1AD03 /* TestingFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingFile.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				24CEFFAA213A937E007AAC25 /* BDButton.swift */,
 				24CEFFAC213A940D007AAC25 /* Extension.swift */,
 				24CEFFB0213AA36C007AAC25 /* MyAppPlayerStats.swift */,
+				243F799F2141A0E00007F001 /* StoreReviewHelper.swift */,
 				24CEFFAE213A94E4007AAC25 /* MyAppManager.swift */,
 				24AE1D63213D9C760043BA19 /* summer.mp3 */,
 				24F03B6F213E7AFE008F561B /* ClickSound.mp3 */,
@@ -212,6 +215,7 @@
 				24CEFFAD213A940E007AAC25 /* Extension.swift in Sources */,
 				243BCF42214126F400D4C431 /* ProgressHUD.m in Sources */,
 				24CEFFA9213A909C007AAC25 /* MeinMenu.swift in Sources */,
+				243F79A02141A0E00007F001 /* StoreReviewHelper.swift in Sources */,
 				24AF1FFD213A8B2A00A179CB /* GameViewController.swift in Sources */,
 				24F03B72213E9266008F561B /* SettingsScene.swift in Sources */,
 				242D831A213EAAA400B64926 /* MusicManager.swift in Sources */,

@@ -76,7 +76,8 @@ class GameOver: SKScene {
         var button = BDButton(imageNamed: "replayButton", title: "", buttonAction: {
             
             //Pop-up to rate the game on the App Store
-            SKStoreReviewController.requestReview()
+            //SKStoreReviewController.requestReview()
+            StoreReviewHelper.checkAndAskForReview()
             
             MyAppManager.shared.transiton(self, toScene: .GameplayScene, transition: SKTransition.moveIn(with: .up, duration: 0.5))
         })

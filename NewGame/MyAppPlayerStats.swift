@@ -8,6 +8,7 @@
 
 import Foundation
 import SpriteKit
+import StoreKit
 
 let kSoundsState = "kSoundsState"
 let kBackgroundMusicName = "summer"
@@ -15,6 +16,8 @@ let kBackgroundMusicExtension = "mp3"
 let kScore = "kScore"
 let kBestScore = "kBestScore"
 let kMusicvolume = "kMusicVolume"
+let kAppStoreReview = "kAppStoreReview"
+
 
 enum SoundFileName: String {
     case ClickSound = "ClickSound.mp3"
@@ -25,6 +28,10 @@ class MyAppPlayerStats {
     private init() {}
     //Creating a singleton
     static let shared = MyAppPlayerStats()
+    
+    
+    let appLaunches = UserDefaults.standard.integer(forKey: "appLaunches")
+    
     
     func setScore(_ value: Int) {
         
