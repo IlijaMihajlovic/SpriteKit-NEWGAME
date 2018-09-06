@@ -75,7 +75,10 @@ class GameOver: SKScene {
     lazy var replayButtonVar: BDButton = {
         var button = BDButton(imageNamed: "replayButton", title: "", buttonAction: {
             
-       MyAppManager.shared.transiton(self, toScene: .GameplayScene, transition: SKTransition.moveIn(with: .up, duration: 0.5))
+            //Pop-up to rate the game on the App Store
+            SKStoreReviewController.requestReview()
+            
+            MyAppManager.shared.transiton(self, toScene: .GameplayScene, transition: SKTransition.moveIn(with: .up, duration: 0.5))
         })
         button.scaleTo(screenWithPercentage: 0.25)
         button.zPosition = 1
@@ -85,7 +88,6 @@ class GameOver: SKScene {
     
     override func didMove(to view: SKView) {
         print("Inside Game Over Scene")
-        SKStoreReviewController.requestReview()
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
         setupNodes()
         addNodes()

@@ -7,10 +7,17 @@
 //
 
 import SpriteKit
+import UIKit
+import Foundation
 
 class GameplayScene: SKScene {
     
+    var wrongTapTextPopUpArray = ["Close Miss","NextTime More Luck","You're Getting Closer","Miss","Wrong","Miss"]
     
+    
+    
+   
+
     //MARK: - Background Image
     var background: SKSpriteNode = {
         var sprite = SKSpriteNode(imageNamed: "backgroundImage")
@@ -37,7 +44,7 @@ class GameplayScene: SKScene {
         return button
     }()
     
-    
+    //MARK: Score Label
     var score = 0
     lazy var scoreLabel: SKLabelNode = {
         var label = SKLabelNode(fontNamed: "Pacific-Again")
@@ -69,7 +76,7 @@ class GameplayScene: SKScene {
         addChild(backButtonToMainMenu)
     }
     
-    //Start new game
+    //Delete old objects and layout new ones
     func startNewBoard() {
         removeAllDonuts()
         addNewDonuts()
@@ -89,8 +96,6 @@ class GameplayScene: SKScene {
             }
             donut.scaleTo(screenWithPercentage: CGFloat.random(0.2, max: 0.3))
             donut.zPosition = 1
-            
-            //donut.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.heigth * 0.5)
             
             donut.position = CGPoint(x: ScreenSize.width * CGFloat.random(0.1, max: 0.8), y: ScreenSize.heigth * CGFloat.random(0.1, max: 0.8))
             
@@ -146,8 +151,16 @@ class GameplayScene: SKScene {
     //Go to GameOver scene
     func handleWrongDonutTapped() {
         MyAppPlayerStats.shared.setScore(score)
-        ProgressHUD.showError("Unfortunately Wrong ")
+        shuffleTextInWrongTapPopUp()
         MyAppManager.shared.transiton(self, toScene: .GameOver, transition: SKTransition.moveIn(with: .right, duration: 0.5))
+    }
+    
+    //Show random text on a pop-up when the user taps the wrong item
+    func shuffleTextInWrongTapPopUp() {
+        for i in wrongTapTextPopUpArray.shuffled() {
+            let wrongTapPopUp = i
+            ProgressHUD.showError(wrongTapPopUp)
+        }
     }
     
 }

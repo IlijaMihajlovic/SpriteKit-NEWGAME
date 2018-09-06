@@ -103,7 +103,6 @@
 			children = (
 				24F03B73213E93BA008F561B /* Game Scenes */,
 				24AF1FF4213A8B2900A179CB /* AppDelegate.swift */,
-				24F03B71213E9266008F561B /* SettingsScene.swift */,
 				247C80DF214043DA00A1AD03 /* ButtonFile.swift */,
 				242D8319213EAAA400B64926 /* MusicManager.swift */,
 				242D831B213EB03400B64926 /* Music.swift */,
@@ -128,6 +127,7 @@
 			children = (
 				24CEFFA8213A909C007AAC25 /* MeinMenu.swift */,
 				24A737DA213B1F480015744D /* GameOver.swift */,
+				24F03B71213E9266008F561B /* SettingsScene.swift */,
 				24CEFFB2213AA3DD007AAC25 /* GameplayScene.swift */,
 				24236EDD213FDE8E008E0707 /* TestingFile.swift */,
 			);

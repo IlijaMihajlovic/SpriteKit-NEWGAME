@@ -41,7 +41,7 @@ class MyAppManager {
            
             MyAppPlayerStats.shared.setSounds(true)
             
-            //Set the music volime to 100%
+            //Set the music volime to 40%
             MyAppPlayerStats.shared.saveMusicVolume(0.4)
             
             UserDefaults.standard.set(true, forKey: "isFirstLaunch")
