@@ -59,6 +59,14 @@ class GameScene: SKScene{
                 }
             }
         }
+        
+        
+        
+        
+        
+        
+        
+        
 }
 
 //    The other way way would be to subclass a SKSpriteNode and make your Button class (Button:SKSpriteNode), set its userInteractionEnabled property to true, and implement its touchesBegan/touchesEnded methods.

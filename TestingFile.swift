@@ -79,15 +79,33 @@ class TestingFile: SKScene {
         
     }
     
+    //Toggle Button Image
     //touchesEnded- if touch stayed within button during touchesMoved, change texture back.
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for touch in touches {
-            if touch == touches.first {
-                let location = touch.location(in: buttonPlay)
+        
+        let touch = touches.first
+        if let location = touch?.location(in: self){
+            let node = atPoint(location)
+            
+            
+            if node.name == "play" {
+                SKTAudio.sharedInstance().pauseBackgroundMusic()
+                node.removeFromParent()
                 
-                if buttonPlay.contains(location) {
+                //Not really needed for this example, but a good habit
+                if pauseMusicButton.parent == nil {
                     
-                    buttonPlay = SKSpriteNode(fileNamed: "buttonPlay")!
+                    addChild(pauseMusicButton)
+                }
+                
+            } else if node.name == "pause" {
+                SKTAudio.sharedInstance().resumeBackgroundMusic()
+                node.removeFromParent()
+                
+                //Not really needed for this example, but a good habit
+                if playMusicButton.parent == nil {
+                    
+                    addChild(playMusicButton)
                 }
             }
         }

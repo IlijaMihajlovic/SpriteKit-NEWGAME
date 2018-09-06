@@ -106,39 +106,7 @@ class SettingsScene: SKScene {
         
     }
     
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch = touches.first
-        if let location = touch?.location(in: self){
-            let node = atPoint(location)
-            
-            
-            if node.name == "play" {
-                SKTAudio.sharedInstance().pauseBackgroundMusic()
-                node.removeFromParent()
-                
-                //Not really needed for this example, but a good habit
-                if pauseMusicButton.parent == nil {
-                    
-                    addChild(pauseMusicButton)
-                }
-                
-            } else if node.name == "pause" {
-                SKTAudio.sharedInstance().resumeBackgroundMusic()
-                node.removeFromParent()
-                
-                //Not really needed for this example, but a good habit
-                if playMusicButton.parent == nil {
-                    
-                    addChild(playMusicButton)
-                }
-            }
-        }
-    }
-    
-    
-    
-    
+
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
 
@@ -171,5 +139,6 @@ class SettingsScene: SKScene {
         }
     
     
+
     
 }
