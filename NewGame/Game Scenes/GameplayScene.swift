@@ -135,6 +135,7 @@ class GameplayScene: SKScene {
     func handleWinnerDonutTapped() {
         score += 1
         updateScoreLabel()
+        ProgressHUD.showSuccess("Correct")
         startNewBoard()
     }
     
@@ -145,6 +146,7 @@ class GameplayScene: SKScene {
     //Go to GameOver scene
     func handleWrongDonutTapped() {
         MyAppPlayerStats.shared.setScore(score)
+        ProgressHUD.showError("Unfortunately Wrong ")
         MyAppManager.shared.transiton(self, toScene: .GameOver, transition: SKTransition.moveIn(with: .right, duration: 0.5))
     }
     

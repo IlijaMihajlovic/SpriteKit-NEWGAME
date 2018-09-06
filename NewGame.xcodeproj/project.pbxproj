@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		242D831A213EAAA400B64926 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D8319213EAAA400B64926 /* MusicManager.swift */; };
 		242D831C213EB03400B64926 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D831B213EB03400B64926 /* Music.swift */; };
+		243BCF42214126F400D4C431 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 243BCF3F214126F400D4C431 /* ProgressHUD.m */; };
+		243BCF43214126F400D4C431 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 243BCF40214126F400D4C431 /* ProgressHUD.bundle */; };
 		24A737D9213B16B70015744D /* Pacific Again.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24A737D8213B16B70015744D /* Pacific Again.ttf */; };
 		24A737DB213B1F480015744D /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A737DA213B1F480015744D /* GameOver.swift */; };
 		24AE1D64213D9C760043BA19 /* summer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24AE1D63213D9C760043BA19 /* summer.mp3 */; };
@@ -30,6 +32,10 @@
 		24236EDD213FDE8E008E0707 /* TestingFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestingFile.swift; path = ../../../TestingFile.swift; sourceTree = "<group>"; };
 		242D8319213EAAA400B64926 /* MusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
 		242D831B213EB03400B64926 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		243BCF3E214126F300D4C431 /* NewGame-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewGame-Bridging-Header.h"; sourceTree = "<group>"; };
+		243BCF3F214126F400D4C431 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		243BCF40214126F400D4C431 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		243BCF41214126F400D4C431 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		247C80DF214043DA00A1AD03 /* ButtonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonFile.swift; path = ../../ButtonFile.swift; sourceTree = "<group>"; };
 		247C80E0214043DE00A1AD03 /* ButtonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFile.swift; sourceTree = "<group>"; };
 		247C80E1214043E400A1AD03 /* TestingFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingFile.swift; sourceTree = "<group>"; };
@@ -63,6 +69,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		243BCF3D2141269100D4C431 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				243BCF40214126F400D4C431 /* ProgressHUD.bundle */,
+				243BCF41214126F400D4C431 /* ProgressHUD.h */,
+				243BCF3F214126F400D4C431 /* ProgressHUD.m */,
+				243BCF3E214126F300D4C431 /* NewGame-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		24AF1FE8213A8B2900A179CB = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +103,7 @@
 			children = (
 				24F03B73213E93BA008F561B /* Game Scenes */,
 				24AF1FF4213A8B2900A179CB /* AppDelegate.swift */,
+				24F03B71213E9266008F561B /* SettingsScene.swift */,
 				247C80DF214043DA00A1AD03 /* ButtonFile.swift */,
 				242D8319213EAAA400B64926 /* MusicManager.swift */,
 				242D831B213EB03400B64926 /* Music.swift */,
@@ -100,6 +118,7 @@
 				24AF2003213A8B2B00A179CB /* LaunchScreen.storyboard */,
 				24AF2006213A8B2B00A179CB /* Info.plist */,
 				24A737D8213B16B70015744D /* Pacific Again.ttf */,
+				243BCF3D2141269100D4C431 /* Supporting Files */,
 			);
 			path = NewGame;
 			sourceTree = "<group>";
@@ -110,7 +129,6 @@
 				24CEFFA8213A909C007AAC25 /* MeinMenu.swift */,
 				24A737DA213B1F480015744D /* GameOver.swift */,
 				24CEFFB2213AA3DD007AAC25 /* GameplayScene.swift */,
-				24F03B71213E9266008F561B /* SettingsScene.swift */,
 				24236EDD213FDE8E008E0707 /* TestingFile.swift */,
 			);
 			path = "Game Scenes";
@@ -148,6 +166,7 @@
 				TargetAttributes = {
 					24AF1FF0213A8B2900A179CB = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -176,6 +195,7 @@
 			files = (
 				24F03B70213E7AFE008F561B /* ClickSound.mp3 in Resources */,
 				24AF2002213A8B2B00A179CB /* Assets.xcassets in Resources */,
+				243BCF43214126F400D4C431 /* ProgressHUD.bundle in Resources */,
 				24AE1D64213D9C760043BA19 /* summer.mp3 in Resources */,
 				24A737D9213B16B70015744D /* Pacific Again.ttf in Resources */,
 				24AF2005213A8B2B00A179CB /* LaunchScreen.storyboard in Resources */,
@@ -190,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24CEFFAD213A940E007AAC25 /* Extension.swift in Sources */,
+				243BCF42214126F400D4C431 /* ProgressHUD.m in Sources */,
 				24CEFFA9213A909C007AAC25 /* MeinMenu.swift in Sources */,
 				24AF1FFD213A8B2A00A179CB /* GameViewController.swift in Sources */,
 				24F03B72213E9266008F561B /* SettingsScene.swift in Sources */,
@@ -336,6 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NewGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -344,6 +366,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MafiaCaffe.NewGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NewGame/Supporting Files/NewGame-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -353,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NewGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -361,6 +386,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MafiaCaffe.NewGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NewGame/Supporting Files/NewGame-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
