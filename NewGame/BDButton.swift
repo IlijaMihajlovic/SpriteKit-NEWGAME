@@ -138,7 +138,7 @@ class BDButton: SKNode {
     func scaleTo(screenWithPercentage: CGFloat) {
         let aspectRatio = button.size.height / button.size.width
         let screenWidth = ScreenSize.width
-        var screenHeight = ScreenSize.heigth
+        var screenHeight = ScreenSize.height
         
         if DeviceType.isiPhoneX {
             screenHeight -= 80

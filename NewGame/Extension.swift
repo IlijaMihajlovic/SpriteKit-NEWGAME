@@ -17,15 +17,15 @@ enum UIUserInterfaceIdiom: Int {
 }
 
 
-//Catching screen sizes
+//Catching device screen sizes
 
 struct ScreenSize {
     static let width = UIScreen.main.bounds.width
-    static let heigth = UIScreen.main.bounds.height
+    static let height = UIScreen.main.bounds.height
 
 //Getting the max & min height
-    static let maxLength = max(ScreenSize.width, ScreenSize.heigth)
-    static let minLength = min(ScreenSize.width, ScreenSize.heigth)
+    static let maxLength = max(ScreenSize.width, ScreenSize.height)
+    static let minLength = min(ScreenSize.width, ScreenSize.height)
     
 }
 
@@ -45,7 +45,6 @@ struct DeviceType {
 }
 
 //Creating an dinamic font size to adept to all screen sizes
-
 public extension CGFloat {
     public static func universalFont(size: CGFloat) -> CGFloat {
        
@@ -96,7 +95,7 @@ public extension CGFloat {
         
         func scaleTo(screenHeightPercentage: CGFloat) {
             let aspectRatio = self.size.width / self.size.height
-            self.size.height = ScreenSize.heigth * screenHeightPercentage
+            self.size.height = ScreenSize.height * screenHeightPercentage
             self.size.width = self.size.height * aspectRatio
         }
         

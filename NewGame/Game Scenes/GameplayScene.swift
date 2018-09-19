@@ -44,7 +44,7 @@ class GameplayScene: SKScene {
         return button
     }()
     
-    //MARK: Score Label
+    //MARK: - Score Label
     var score = 0
     lazy var scoreLabel: SKLabelNode = {
         var label = SKLabelNode(fontNamed: "Pacific-Again")
@@ -65,9 +65,9 @@ class GameplayScene: SKScene {
     }
     
     func setupNodes() {
-        background.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.heigth * 0.5)
-        scoreLabel.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.heigth * 0.9)
-        backButtonToMainMenu.position = CGPoint(x: ScreenSize.width * 0.1 , y: ScreenSize.heigth * 0.9)
+        background.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.height * 0.5)
+        scoreLabel.position = CGPoint(x: ScreenSize.width * 0.5, y: ScreenSize.height * 0.9)
+        backButtonToMainMenu.position = CGPoint(x: ScreenSize.width * 0.1 , y: ScreenSize.height * 0.9)
     }
 
     func addNodes() {
@@ -97,7 +97,7 @@ class GameplayScene: SKScene {
             donut.scaleTo(screenWithPercentage: CGFloat.random(0.2, max: 0.3))
             donut.zPosition = 1
             
-            donut.position = CGPoint(x: ScreenSize.width * CGFloat.random(0.1, max: 0.8), y: ScreenSize.heigth * CGFloat.random(0.1, max: 0.8))
+            donut.position = CGPoint(x: ScreenSize.width * CGFloat.random(0.1, max: 0.8), y: ScreenSize.height * CGFloat.random(0.1, max: 0.8))
             
             addChild(donut)
             
@@ -115,7 +115,7 @@ class GameplayScene: SKScene {
         winnerDonut.scaleTo(screenWithPercentage: 0.5)
         winnerDonut.name = "donut"
         winnerDonut.zPosition = 2
-        winnerDonut.position = CGPoint(x: ScreenSize.width * CGFloat.random(0.1, max: 0.7), y: ScreenSize.heigth * CGFloat.random(0.1, max: 0.7))
+        winnerDonut.position = CGPoint(x: ScreenSize.width * CGFloat.random(0.1, max: 0.7), y: ScreenSize.height * CGFloat.random(0.1, max: 0.7))
         addChild(winnerDonut)
         
         //Adds a pop-up effect on the winner node

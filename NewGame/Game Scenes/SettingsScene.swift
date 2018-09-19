@@ -73,8 +73,8 @@ class SettingsScene: SKScene {
     
     func setupNodes() {
         background.position = CGPoint.zero
-        backButtonToMainMenu.position = CGPoint(x: ScreenSize.width * -0.37 , y: ScreenSize.heigth * 0.40 )
-        playMusicButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.0)
+        backButtonToMainMenu.position = CGPoint(x: ScreenSize.width * -0.37 , y: ScreenSize.height * 0.40 )
+        playMusicButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.height * 0.0)
         pauseMusicButton.position = playMusicButton.position
         
     }

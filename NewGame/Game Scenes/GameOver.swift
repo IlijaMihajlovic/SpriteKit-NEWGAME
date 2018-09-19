@@ -96,11 +96,11 @@ class GameOver: SKScene {
     
     func setupNodes() {
         background.position = CGPoint.zero
-        title.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.25)
-        score.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.14)
-        bestScore.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * -0.14)
-        backButtonVar.position = CGPoint(x: ScreenSize.width * -0.36 , y: ScreenSize.heigth * 0.40)
-        replayButtonVar.position = CGPoint(x: ScreenSize.heigth * 0.0, y: -0.10)
+        title.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.height * 0.25)
+        score.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.height * 0.14)
+        bestScore.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.height * -0.14)
+        backButtonVar.position = CGPoint(x: ScreenSize.width * -0.36 , y: ScreenSize.height * 0.40)
+        replayButtonVar.position = CGPoint(x: ScreenSize.height * 0.0, y: -0.10)
         
     }
     

@@ -112,11 +112,11 @@ class MainMenu: SKScene {
     func setupNodes() {
         playButton.position = CGPoint.zero
         playButton.logAvailableFonts()
-        title.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * 0.25)
+        title.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.height * 0.25)
         background.position = CGPoint.zero
-        rateButtonVar.position = CGPoint(x: ScreenSize.width * -0.30, y: ScreenSize.heigth * -0.14)
-        shareButtonVar.position = CGPoint(x: ScreenSize.width * 0.30, y: ScreenSize.heigth * -0.15)
-        settingsButon.position = CGPoint(x: ScreenSize.width * -0.37 , y: ScreenSize.heigth * 0.40 )
+        rateButtonVar.position = CGPoint(x: ScreenSize.width * -0.30, y: ScreenSize.height * -0.14)
+        shareButtonVar.position = CGPoint(x: ScreenSize.width * 0.30, y: ScreenSize.height * -0.15)
+        settingsButon.position = CGPoint(x: ScreenSize.width * -0.37 , y: ScreenSize.height * 0.40 )
     }
     
     func addNodes() {

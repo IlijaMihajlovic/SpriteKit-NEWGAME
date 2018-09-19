@@ -66,16 +66,16 @@ class MyAppManager {
     func getScene(_ sceneType: SceneType) -> SKScene? {
         switch  sceneType {
         case SceneType.MainMenu:
-            return MainMenu(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+            return MainMenu(size: CGSize(width: ScreenSize.width, height: ScreenSize.height))
         
         case SceneType.GameplayScene:
-            return GameplayScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+            return GameplayScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.height))
             
         case SceneType.GameOver:
-            return GameOver(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+            return GameOver(size: CGSize(width: ScreenSize.width, height: ScreenSize.height))
             
         case SceneType.SettingsScene:
-            return SettingsScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.heigth))
+            return SettingsScene(size: CGSize(width: ScreenSize.width, height: ScreenSize.height))
         }
     }
     
